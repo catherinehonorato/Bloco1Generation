@@ -1,29 +1,27 @@
-package ExercicioRepeticao;
+package Condicionais;
 import java.util.Scanner;
-
 public class Ex03 {
 
 	public static void main(String[] args) {
-		int idade, cont21 = 0, cont50 = 0;
+		int idade;
 		
 		try (Scanner leia = new Scanner(System.in)) {
-			System.out.print("Digite uma idade: ");
+			System.out.println("Digite a idade: ");
 			idade = leia.nextInt();
-			
-			while (idade != -99) {
-				if (idade < 21 && idade >= 0) {
-					cont21++;
-				}
-				else if (idade > 50) {
-					cont50++;
-				}
-				System.out.print("Digite outra idade: ");
-				idade = leia.nextInt();
-			}
 		}
 		
-		System.out.println("Pessoas com menos de 21 anos: " + cont21);
-		System.out.println("Pessoas com mais de 50 anos: " + cont50);
+		if (idade >= 10 && idade <= 14) {
+			System.out.println("Sua categoria é Infantil.");
+		}
+		else if (idade >= 15 && idade <= 17) {
+			System.out.println("Sua categoria é Juvenil.");
+		}
+		else if (idade >= 18 && idade <= 25) {
+			System.out.println("Sua categoria é Adulto.");
+		}
+		else {
+			System.out.println("Sua idade não corresponde.");
+		}
 		System.out.println("FIM DO PROGRAMA!");
 
 	}
